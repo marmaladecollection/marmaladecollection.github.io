@@ -1,0 +1,87 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css" />
+
+</head>
+
+  
+<body>
+    <div id="banner">Free UK delivery on full price orders over £150. Free UK returns.</div>
+    <div id="topBar">
+        <div id="menu">MENU</div>
+        <div id="logo" class="hollowText" onclick="window.open('index.html')">MARMALADE</div>
+        <div id="basket">BAG (0)</div>
+    </div>
+
+    <div class="itemBreadcrumb">Home / Tables / Victorian Desk</div>
+
+    <div class="item">
+        <div class="mainBit">
+            <div class="images">
+                <img src="thumbnail.jpg" />
+            </div>
+            <div class="actions">
+                <div class="summary">
+                    <span class="description">Rose and Geranium Scented Candle</span>
+                    <span class="price">£29.00</span>
+                </div>
+                <span class="returns">Free UK Returns on all orders</span>
+                <div class="buttons">
+                    <a class="addToBag">Add to bag</a>
+                    <a class="saveForLater">Save for later</a>
+                </div>
+                <span class="productInfo">Product Information</span>
+            </div>
+        </div>
+        <div class="secondaryBit">
+            <div class="productBlurb">
+                <p>
+                    Incredibly soft sheepskin hot water bottle cover. The sheepskins are specially sorted and selected,
+                    then cut by hand in Somerset. Each piece is unique, with variation in texture and colour.
+                </p>
+                <p>
+                    The open top design allows for easy filling. To fit a standard sized hot water bottle, which is
+                    approximately 33cm x 20cm and often 1.7L capacity.
+                </p>
+                <div class="details">
+                    <h4>Details</h4>
+                    H 100cm x 70cm
+                </div>
+            </div>
+            <div class="deliveryBlurb">
+                <h4>Delivery & Returns</h4>
+                <h4>Free standard delivery on full price orders over £150.</h4>
+                <div>
+                    <div>Standard Delivery (3-4 working days): £3</div>
+                    <div>Express Delivery (1-2 working days): £6</div>
+                    <div>Next Working Day Delivery: £8</div>
+                    <div>Before 12pm Next Working Day Delivery: £14</div>
+                </div>
+                <h4>Free returns <span>(subject to our returns policy).</span></h4>
+                <span>Please refer to our delivery & returns policies for more information.</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div>Help</div>
+        <div>Delivery</div>
+        <div>Returns</div>
+        <div>Contact Us</div>
+        <div>About Us</div>
+    </div>
+
+    <script type="text/javascript">
+        document.querySelector('.images').addEventListener('mousemove', function(e) {
+            console.log("hello")
+            const rect = this.getBoundingClientRect();
+            const x = e.clientX - rect.left; // x position within the element
+            const y = e.clientY - rect.top; // y position within the element
+        
+            this.querySelector('img').style.transformOrigin = `${x}px ${y}px`;
+        });
+    </script>
+</body>
